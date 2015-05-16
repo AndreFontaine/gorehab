@@ -1,14 +1,36 @@
-color1 = #ff0049
+color1 = #ff0041
 color2 = #fff
+color3 = #d8d8d8
+heightpanel = 100%
+widthpanel = 21%
 
 .container
 	width 100%
 	height 100%
 	background #fff
 .menu
-	background #d8d8d8
-	width 320px
-	height 100%	
+	background color3
+	width widthpanel
+	height heightpanel	
+.main
+	display block
+	background-color color2
+	position fixed
+	top 0
+	width 79%
+	padding 10px
+.main__camera
+	height 800px
+	background-color color2
+.kinect__camera
+	background-color color1
+	margin 50px
+	height 84%
+.main__nextbtn
+	background-color color2
+	height 10%
+	text-align right
+	padding 20px
 .main, .menu
 	display inline-block
 .menu__user
@@ -21,8 +43,17 @@ ul
 	padding 0
 	text-align center
 ul li
-	text-align center
-.menu__name, ul
+	color color2
+	text-align right
+	text-transform uppercase
+	width 220px
+	height 30px
+	margin 10px auto
+	padding 16px 6px 6px 6px 
+	border-radius 6px
+	font-weight bold
+	letter-spacing 0.2em
+.menu__name, li
 	background color1
 .outer-circle
 	margin -90px auto 0 auto
@@ -48,3 +79,34 @@ ul li
 	position absolute
 	padding-top 50px
 	left 0px
+.menu__logo
+	background color1
+	text-align center
+	position fixed
+	bottom 0
+.terapeuta
+	background url(../img/terapeuta.png) 0 0 no-repeat
+	background-position-x 12px
+	background-position-y 8px
+	background-color color1
+.rutinas
+	background url(../img/rutinas.png) 0 0 no-repeat
+	background-position-x 12px
+	background-position-y 8px
+	background-color color1
+.progreso
+	background url(../img/progreso.png) 0 0 no-repeat
+	background-position-x 12px
+	background-position-y 8px
+	background-color color1
+.btn--next
+	width 50px
+	height 50px
+	background-color color1
+	padding 15px 15px 15px 15px
+	margin 5px
+	border-radius 50%
+	background url(../img/progreso.png) 0 0 no-repeat
+	background-position-x 12px
+	background-position-y 8px
+	background-color color1

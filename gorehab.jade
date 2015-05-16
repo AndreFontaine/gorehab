@@ -12,14 +12,17 @@ html(lang="en")
 				div.outer-circle
 					div.inner-circle 
 						span.name Francisco David Corredor
-				div.menu__items menu__items
+				div.menu__items
 					ul
-						li.a(href="#") item
-						li.a(href="#") item
-						li.a(href="#") item
-				div.menu__logo menu__logo
+						li.terapeuta terapeuta
+						li.rutinas rutinas
+						li.progreso progreso
+				div.menu__logo
+					img(src="img/logo.png",alt="logotipo",width="50%")
 			div.main
-				div.main__nextbtn main__nextbtn
-				div.main__camera main__camera
+				div.main__nextbtn
+					a(href="#").btn--next lls
+				div.main__camera
+					div.kinect__camera
 		script(src="js/jquery-2.1.4.min.js")
 		script(src="js/init.js")

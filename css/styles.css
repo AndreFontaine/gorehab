@@ -5,8 +5,31 @@
 }
 .menu {
   background: #d8d8d8;
-  width: 320px;
+  width: 21%;
   height: 100%;
+}
+.main {
+  display: block;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 79%;
+  padding: 10px;
+}
+.main__camera {
+  height: 800px;
+  background-color: #fff;
+}
+.kinect__camera {
+  background-color: #ff0041;
+  margin: 50px;
+  height: 84%;
+}
+.main__nextbtn {
+  background-color: #fff;
+  height: 10%;
+  text-align: right;
+  padding: 20px;
 }
 .main,
 .menu {
@@ -24,11 +47,20 @@ ul {
   text-align: center;
 }
 ul li {
-  text-align: center;
+  color: #fff;
+  text-align: right;
+  text-transform: uppercase;
+  width: 220px;
+  height: 30px;
+  margin: 10px auto;
+  padding: 16px 6px 6px 6px;
+  border-radius: 6px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
 }
 .menu__name,
-ul {
-  background: #ff0049;
+li {
+  background: #ff0041;
 }
 .outer-circle {
   margin: -90px auto 0 auto;
@@ -39,7 +71,7 @@ ul {
   position: relative;
 }
 .inner-circle {
-  background: #ff0049;
+  background: #ff0041;
   border-radius: 50%;
   color: #fff;
   font-size: 0.7em;
@@ -56,4 +88,40 @@ ul {
   position: absolute;
   padding-top: 50px;
   left: 0px;
+}
+.menu__logo {
+  background: #ff0041;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+.terapeuta {
+  background: url("../img/terapeuta.png") 0 0 no-repeat;
+  background-position-x: 12px;
+  background-position-y: 8px;
+  background-color: #ff0041;
+}
+.rutinas {
+  background: url("../img/rutinas.png") 0 0 no-repeat;
+  background-position-x: 12px;
+  background-position-y: 8px;
+  background-color: #ff0041;
+}
+.progreso {
+  background: url("../img/progreso.png") 0 0 no-repeat;
+  background-position-x: 12px;
+  background-position-y: 8px;
+  background-color: #ff0041;
+}
+.btn--next {
+  width: 50px;
+  height: 50px;
+  background-color: #ff0041;
+  padding: 15px 15px 15px 15px;
+  margin: 5px;
+  border-radius: 50%;
+  background: url("../img/progreso.png") 0 0 no-repeat;
+  background-position-x: 12px;
+  background-position-y: 8px;
+  background-color: #ff0041;
 }
