@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9216E84F-1723-484E-8DE6-250B875F24B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Samples.Kinect.Webserver</RootNamespace>
+    <AssemblyName>Microsoft.Samples.Kinect.Webserver</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputPath>$(SolutionDir)$(PlatformTarget).$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Kinect.Toolkit.BackgroundRemoval">
+      <HintPath>$(KINECT_TOOLKIT_DIR)Assemblies\Microsoft.Kinect.Toolkit.BackgroundRemoval.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Kinect.Toolkit.Interaction">
+      <HintPath>$(KINECT_TOOLKIT_DIR)Assemblies\Microsoft.Kinect.Toolkit.Interaction.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Kinect">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(KINECTSDK10_DIR)\Assemblies\Microsoft.Kinect.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileRequestHandler.cs" />
+    <Compile Include="FileRequestHandlerFactory.cs" />
+    <Compile Include="IHttpRequestHandler.cs" />
+    <Compile Include="IHttpRequestHandlerFactory.cs" />
+    <Compile Include="JsonSerializationExtensions.cs" />
+    <Compile Include="KinectWebserver.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RpcResult.cs" />
+    <Compile Include="Sensor\BackgroundRemovalStreamHandler.cs" />
+    <Compile Include="Sensor\DefaultUserStateManager.cs" />
+    <Compile Include="Sensor\IUserStateManager.cs" />
+    <Compile Include="Sensor\InteractionStreamHandler.cs" />
+    <Compile Include="Sensor\ISensorStreamHandler.cs" />
+    <Compile Include="Sensor\ISensorStreamHandlerFactory.cs" />
+    <Compile Include="Sensor\KinectRequestHandler.cs" />
+    <Compile Include="Sensor\KinectRequestHandlerFactory.cs" />
+    <Compile Include="Sensor\SensorStatusStreamHandler.cs" />
+    <Compile Include="Sensor\SensorStreamHandlerBase.cs" />
+    <Compile Include="Sensor\SensorStreamHandlerContext.cs" />
+    <Compile Include="Sensor\SensorStreamHandlerFactory.cs" />
+    <Compile Include="Sensor\Serialization\BackgroundRemovalStreamMessage.cs" />
+    <Compile Include="Sensor\Serialization\EventMessage.cs" />
+    <Compile Include="Sensor\Serialization\FunctionCallRequest.cs" />
+    <Compile Include="Sensor\Serialization\FunctionCallResponse.cs" />
+    <Compile Include="Sensor\Serialization\ImageHeaderStreamMessage.cs" />
+    <Compile Include="Sensor\Serialization\InteractionStreamHitTestInfo.cs" />
+    <Compile Include="Sensor\Serialization\InteractionStreamMessage.cs" />
+    <Compile Include="Sensor\Serialization\MessageHandPointer.cs" />
+    <Compile Include="Sensor\Serialization\SensorStatusEventMessage.cs" />
+    <Compile Include="Sensor\Serialization\SkeletonStreamMessage.cs" />
+    <Compile Include="Sensor\Serialization\StateMappingEntry.cs" />
+    <Compile Include="Sensor\Serialization\StreamMessage.cs" />
+    <Compile Include="Sensor\Serialization\UserStatesChangedEventMessage.cs" />
+    <Compile Include="Sensor\Serialization\UserTrackingIdChangedEventArgs.cs" />
+    <Compile Include="Sensor\SkeletonStreamHandler.cs" />
+    <Compile Include="Sensor\UserActivityMeter.cs" />
+    <Compile Include="Sensor\UserActivityRecord.cs" />
+    <Compile Include="Sensor\UserStateChangedEventArgs.cs" />
+    <Compile Include="Sensor\UserViewerColorizer.cs" />
+    <Compile Include="SharedConstants.cs" />
+    <Compile Include="ThreadHostedHttpListener.cs" />
+    <Compile Include="UriUtilities.cs" />
+    <Compile Include="WebSocketChannelBase.cs" />
+    <Compile Include="WebSocketEventChannel.cs" />
+    <Compile Include="WebSocketMessage.cs" />
+    <Compile Include="WebSocketMessageExtensions.cs" />
+    <Compile Include="WebSocketRpcChannel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(KINECT_TOOLKIT_DIR)Redist\x86\KinectInteraction180_32.dll">
+      <Link>KinectInteraction180_32.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(KINECT_TOOLKIT_DIR)Redist\amd64\KinectInteraction180_64.dll">
+      <Link>KinectInteraction180_64.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(KINECT_TOOLKIT_DIR)Redist\x86\KinectBackgroundRemoval180_32.dll">
+      <Link>KinectBackgroundRemoval180_32.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(KINECT_TOOLKIT_DIR)Redist\amd64\KinectBackgroundRemoval180_64.dll">
+      <Link>KinectBackgroundRemoval180_64.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Kinect.Toolkit\Microsoft.Kinect.Toolkit.csproj">
+      <Project>{c6f9c31b-6130-4443-a5cc-ef0664552ecd}</Project>
+      <Name>Microsoft.Kinect.Toolkit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

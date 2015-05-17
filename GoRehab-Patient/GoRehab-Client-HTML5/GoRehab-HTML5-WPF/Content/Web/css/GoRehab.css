@@ -1,0 +1,230 @@
+﻿
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI';
+}
+
+#uiContainer {
+    position: relative;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100%;
+}
+
+#logoImg {
+    position: absolute;
+    top: 18px;
+    left: 26px;
+    width: 100px;
+    height: 40px;
+}
+
+#sampleName {
+    position: relative;
+    display: block;
+    text-align: right;
+    font-size: 16pt;
+    color: gray;
+    top: 24px;
+    margin-right: 26px;
+}
+
+#backgroundContainer {
+    position: absolute;
+    top: 80px;
+    width: 100vw;
+    height: 56.25vw;
+    margin-bottom: 26px;
+}
+
+@media screen and (max-width: 960px) {
+    #uiContainer {
+        width: 960px;
+    }
+
+    #backgroundContainer {
+        width: 960px;
+        height: 540px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #uiContainer {
+        width: 1600px;
+    }
+
+    #backgroundContainer {
+        width: 1600px;
+        height: 900px;
+    }
+}
+
+#backgroundImg {
+    width: 100%;
+    height: 100%;
+}
+
+.streamImageCanvas {
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    top: 0;
+    left: 12.5%;
+    opacity: 0.0;
+    transition: opacity 1.0s;
+}
+
+    .streamImageCanvas.showing {
+        opacity: 1.0;
+        transition: opacity 1.0s;
+    }
+
+#buttonContainer {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 160px;
+    bottom: 0;
+}
+
+#choosePanel {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    transition: top 0.4s;
+}
+
+    #choosePanel.showing {
+        top: 0;
+        transition: top 0.4s;
+    }
+
+.commandButtonContainer {
+    position: absolute;
+    width: 18%;
+    height: 100%;
+    top: 0;
+    left: 3%;
+}
+
+.imgButtonContainer {
+    position: absolute;
+    width: 18%;
+    height: 100%;
+    top: 0;
+}
+
+#togglePanelButton {
+    /* Add an explicit background color to make sure mouse/touch events get routed
+               to button even when hovering/pressing over transparent area around button edge. */
+    background-color: rgba(0,0,0,0.0);
+}
+
+#imgButtonContainer1 {
+    left: 25%;
+}
+
+#imgButtonContainer2 {
+    left: 43%;
+}
+
+#imgButtonContainer3 {
+    left: 61%;
+}
+
+#imgButtonContainer4 {
+    left: 79%;
+}
+
+.kinect-button.tile {
+    position: relative;
+    display: block;
+    width: 170px;
+    height: 100px;
+    margin: 30px auto;
+    padding: 0;
+}
+
+    .kinect-button.tile .commandButtonContent {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-style: solid;
+        border-color: white;
+        border-width: 2px;
+        transition: border-width 0.15s;
+        left: -2px;
+        top: -2px;
+    }
+
+.kinect-button.image {
+    position: relative;
+    display: block;
+    width: 170px;
+    height: 100px;
+    margin: 30px auto;
+    padding: 0;
+}
+
+.kinect-button img {
+    width: 100%;
+    height: 100%;
+}
+
+.kinect-button-text {
+    font-size: 14pt;
+    width: 100%;
+    height: 3em;
+    margin-top: -1.5em;
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1600px) {
+    #buttonContainer {
+        height: 186px;
+    }
+
+    .kinect-button.tile {
+        width: 224px;
+        height: 126px;
+    }
+
+    .kinect-button.image {
+        width: 224px;
+        height: 126px;
+    }
+
+    .kinect-button-text {
+        font-size: 16pt;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #buttonContainer {
+        height: 222px;
+    }
+
+    .kinect-button.tile {
+        width: 288px;
+        height: 162px;
+    }
+
+    .kinect-button.image {
+        width: 288px;
+        height: 162px;
+    }
+
+    .kinect-button-text {
+        font-size: 18pt;
+    }
+}

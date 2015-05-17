@@ -1,0 +1,322 @@
+//-----------------README-------------------------------//
+FechaActualizaCIÓN: 10:31 PM 16/05/2015
+Notas: Se adiciono el metodo numero 3. 
+
+FechaActualización: 11:59PM 16/05/2015
+Notas: Se adiciono el metodo numero 4. Se actualizaron los metodos con el campo RequeseObjectType a cada una de las entidades
+	el cual define la entidad o objeto que correspondiente al tipo de respuesta.
+
+
+FechaActualizacion: 12:55 PM 16/05/2015
+Notas: Se agrego el metodo numero 5.
+
+FechaActualizacion: 01:52 AM 17/05/2015
+Notas: Se agrego el metodo numero 6.
+
+FechaActualizacion: 03:21 am 17/05/2015
+Notas: Se agrego el metodo numero 7. Se modifica la URL de los metodos de la controladora Patient al ser renombrada como User(Metodos 2,4,6).
+
+FechaActualizacion: 11:05 am 17/05/2015
+Notas: Se agrego el metodo numero 8. Se moficica los metodos 6 y 7 en los cuales se hace uso del objecto APIResponse como respuesta para presentar de mejor manera la información.
+
+
+
+//------------------------------------------------------//
+
+
+//-----------------------Notas---------------------------//
+
+ApiResponseObject 
+Estructura : 
+	{
+  		"Message": "sample string 1",
+  		"Data": {},
+  		"Error":{
+    			"ClassName": "System.Exception",
+    			"Message": null,		
+			"Data": null,
+    			"InnerException": null,
+    			"HelpURL": "sample string 1",
+    			"StackTraceString": null,
+    			"RemoteStackTraceString": null,
+		    	"RemoteStackIndex": 0,
+    			"ExceptionMethod": null,
+    			"HResult": 3,
+    			"Source": "sample string 2",
+    			"WatsonBuckets": null
+  			}
+	}	
+
+Mensaje: Encaso de que algun dato o algún evento de error o de validación ocurra en el metodo este representa el mensaje con lo sucedido.
+Data: Si es diferente de null trae la información consultada. 
+Error: Objeto de tipo excepción que en cado de ser diferente de null representa que hubo una excepción durante la ejecución del metodo. 
+//------------------------------------------------------//
+MetodosWebService:
+
+1. HttpMethod = Get
+   Content-Type: application/json, text/json
+   URL = http://localhost:50885/api/Excercises
+   Description = Metodo para obtener la lista de ejercicios en la base de datos. Retorna un JSON con los objetos Ejercicios/Rutina.
+		Estos ejercicios/rutinas son los que se le asigan al paciente.
+   ResponseBody/JsonStructure =
+	[
+  		{
+    			"Id": 1,
+			"Nombre": "sample string 2",
+		         "Descripcion": "sample string 3",
+    			"SeccionCuerpo": "sample string 4",
+    			"UrlVideo": "sample string 5",
+    			"UrlImagen": "sample string 6",
+    			"Duracion": 7.1,
+    			"Nivel": "sample string 8"
+  		},
+  		{
+    			"Id": 1,
+    			"Nombre": "sample string 2",
+    			"Descripcion": "sample string 3",
+    			"SeccionCuerpo": "sample string 4",
+    			"UrlVideo": "sample string 5",
+    			"UrlImagen": "sample string 6",
+    			"Duracion": 7.1,
+    			"Nivel": "sample string 8"
+  		},
+  		{
+    			"Id": 1,
+    			"Nombre": "sample string 2",
+    			"Descripcion": "sample string 3",
+    			"SeccionCuerpo": "sample string 4",
+    			"UrlVideo": "sample string 5",
+    			"UrlImagen": "sample string 6",
+    			"Duracion": 7.1,
+    			"Nivel": "sample string 8"
+  		}
+	]
+   RequesObjectType= ArrayList<Ejercicio>
+2. HttpMethod = Get
+   URL = http://localhost:50885/Api/User
+   Content-Type: application/json, text/json
+   Description = Metodo para obtener la lista de pacientes en la base de datos. Retorna un JSON con los objetos Paciente.
+   ResponseBody/JsonStructure=
+	[
+  		{
+    			"Id": 1,
+    			"Estado": "sample string 2",
+    			"Incapacidad": "sample string 3",
+    			"FechaUltimoTratamiento": "2015-05-16T22:14:36.7866882-05:00",
+    			"PrimerNombre": "sample string 5",
+    			"PrimerApellido": "sample string 6",
+    			"UserName": "sample string 7",
+    			"Contrasena": "sample string 8"
+  		},
+  		{	"Id": 1,
+    			"Estado": "sample string 2",
+    			"Incapacidad": "sample string 3",
+    			"FechaUltimoTratamiento": "2015-05-16T22:14:36.7866882-05:00",
+    			"PrimerNombre": "sample string 5",
+    			"PrimerApellido": "sample string 6",
+    			"UserName": "sample string 7",
+    			"Contrasena": "sample string 8"
+ 		},
+  		{
+    			"Id": 1,
+    			"Estado": "sample string 2",
+    			"Incapacidad": "sample string 3",
+    			"FechaUltimoTratamiento": "2015-05-16T22:14:36.7866882-05:00",
+    			"PrimerNombre": "sample string 5",
+    			"PrimerApellido": "sample string 6",
+			"UserName": "sample string 7",
+    			"Contrasena": "sample string 8"
+  		}
+	]
+    RequesObjectType= ArrayList<Paciente>
+3.HttpMethod = Get
+   URL =  http://localhost:50885/Api/User?id={idUsuario}	
+   Parameters = {idUsuario} : el id del usuario del que se desea obtener la información.
+   Content-Type: application/json, text/json
+   Description = Metodo para obtener un unico paciente con un idEspecifico. Retorna un JSON de objeto tipo Paciente.
+   ResponseBody/JsonStructure=
+	{
+  		"Id": 1,
+		"Estado": "sample string 2",
+  		"Incapacidad": "sample string 3",
+  		"FechaUltimoTratamiento": "2015-05-16T22:28:27.0151746-05:00",
+  		"PrimerNombre": "sample string 5",
+  		"PrimerApellido": "sample string 6",
+  		"UserName": "sample string 7",
+  		"Contrasena": "sample string 8"
+	}
+  RequesObjectType= Paciente
+4.HttpMethod = Post
+   URL =  http://localhost:50885/Api/User	
+   RequestBody= 
+	{
+ 		 "IdPaciente": 1,
+                 "IdEjercicio": 1
+	}
+   RequestObjectType= Rutina
+   Content-Type: application/json
+   Description = Metodo para relacionar un ejercicio a un Paciente.Retorna falso si hubo algún error al realizar la relación.
+   ResponseBody/JsonStructure= Bool.
+
+5. HttpMethod = Get
+   URL =  http://localhost:50885/Api/Excercises?Id={idEjercicio}
+   Parameters = {idEjercicio}: el id del ejercicio del que se desea obtener la información.
+   Content-Type: application/json, text/json
+   Description = Metodo para obtener un unico ejercicio con un {idEjercicio} Especifico. Retorna un JSON de objeto tipo Ejercicio.
+   ResponseBody/JsonStructure=
+	{
+  		"Id": 1,
+  		"Nombre": "sample string 2",
+  		"Descripcion": "sample string 3",
+  		"SeccionCuerpo": "sample string 4",
+  		"UrlVideo": "sample string 5",
+  		"UrlImagen": "sample string 6",
+  		"Duracion": 7.1,
+  		"Nivel": "sample string 8"
+	}
+  RequesObjectType= Ejercicio
+6.HttpMethod = Get
+   URL =  http://localhost:50885/Api/User?patientId={idPaciente}
+   Parameters = {idPaciente}: el id del paciente del que se desea obtener la lista de ejercicios que tiene asignado.
+   Content-Type: application/json, text/json
+   Description = Metodo para obtener una lista de ejercicios que tiene un paciente asignados. Retorna un JSON con una lista de Ejercicios.
+   ResponseBody/JsonStructure=
+	{
+  "Message": "sample string 1",
+  "Data": 
+	[
+  		{
+    			"Id": 1,
+			"Nombre": "sample string 2",
+		         "Descripcion": "sample string 3",
+    			"SeccionCuerpo": "sample string 4",
+    			"UrlVideo": "sample string 5",
+    			"UrlImagen": "sample string 6",
+    			"Duracion": 7.1,
+    			"Nivel": "sample string 8"
+  		},
+  		{
+    			"Id": 1,
+    			"Nombre": "sample string 2",
+    			"Descripcion": "sample string 3",
+    			"SeccionCuerpo": "sample string 4",
+    			"UrlVideo": "sample string 5",
+    			"UrlImagen": "sample string 6",
+    			"Duracion": 7.1,
+    			"Nivel": "sample string 8"
+  		},
+  		{
+    			"Id": 1,
+    			"Nombre": "sample string 2",
+    			"Descripcion": "sample string 3",
+    			"SeccionCuerpo": "sample string 4",
+    			"UrlVideo": "sample string 5",
+    			"UrlImagen": "sample string 6",
+    			"Duracion": 7.1,
+    			"Nivel": "sample string 8"
+  		}
+	],
+  "Error": {
+    "ClassName": "System.Exception",
+    "Message": null,
+    "Data": null,
+    "InnerException": null,
+    "HelpURL": "sample string 1",
+    "StackTraceString": null,
+    "RemoteStackTraceString": null,
+    "RemoteStackIndex": 0,
+    "ExceptionMethod": null,
+    "HResult": 3,
+    "Source": "sample string 2",
+    "WatsonBuckets": null
+  }
+}
+
+
+  RequesObjectType= ApiResponse/Data = List<Ejercicio>
+
+
+7.HttpMethod = Post
+   URL =  http://localhost:50885/Api/User	
+   RequestBody= 
+	{
+  		"UserName": "sample string 1",
+  		"PassWord": "sample string 2"
+	}
+   RequestObjectType= Usuario
+   Content-Type: application/json
+   Description = Metodo para loggear a un Paciente.Retorna null si no se encontro el paciente o la contraseña era incorrecta. Si encuentra al usuario y la contraseña es correcta 
+		devuelve un objecto tipo paciente. C
+   ResponseBody/JsonStructure=
+	
+	{
+  "Message": "sample string 1",
+  "Data": {
+  		"Id": 1,
+  		"Estado": "sample string 2",
+  		"Incapacidad": "sample string 3",
+  		"FechaUltimoTratamiento": "2015-05-17T03:19:44.5891244-05:00",
+  		"PrimerNombre": "sample string 5",
+  		"PrimerApellido": "sample string 6",
+  		"UserName": "sample string 7",
+  		"Contrasena": "sample string 8"
+	},
+  "Error": {
+    "ClassName": "System.Exception",
+    "Message": null,
+    "Data": null,
+    "InnerException": null,
+    "HelpURL": "sample string 1",
+    "StackTraceString": null,
+    "RemoteStackTraceString": null,
+    "RemoteStackIndex": 0,
+    "ExceptionMethod": null,
+    "HResult": 3,
+    "Source": "sample string 2",
+    "WatsonBuckets": null
+  }
+}
+   RequesObjectType= ApiResponse/Data=  Paciente	
+
+8. HttpMethod = Post
+   URL =  http://localhost:50885/Api/User?dummy={string}
+   Parameters = {string} : Parametro sin funcionalidad. Unicamente se encuentra para diferencias los metodos de logeo. 
+   RequestBody= 
+	{
+  		"UserName": "sample string 1",
+  		"PassWord": "sample string 2"
+	}
+   RequestObjectType= Usuario
+   Content-Type: application/json
+   Description = Metodo para loggear a un Terapeuta
+   ResponseBody/JsonStructure=
+	{
+  "Message": "sample string 1",
+  "Data": {
+		"Id":2,
+		"IdUsuario":0,
+                "Especialidad":"Muscular",
+		"PrimerNombre":"Sergio",
+		"PrimerApellido":"Bunny",
+		"UserName":"SergioBun",
+		"Contrasena":"bunny123"
+	},
+  "Error": {
+    "ClassName": "System.Exception",
+    "Message": null,
+    "Data": null,
+    "InnerException": null,
+    "HelpURL": "sample string 1",
+    "StackTraceString": null,
+    "RemoteStackTraceString": null,
+    "RemoteStackIndex": 0,
+    "ExceptionMethod": null,
+    "HResult": 3,
+    "Source": "sample string 2",
+    "WatsonBuckets": null
+  }
+}
+
+   RequesObjectType= ApiResponse/Data= Terapeuta
+
+

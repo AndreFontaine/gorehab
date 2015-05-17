@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Microsoft.Samples.Kinect.WebserverBasics.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="OriginUri" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8181</Value>
+    </Setting>
+    <Setting Name="FileRootDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Content\Web</Value>
+    </Setting>
+    <Setting Name="AccessControlAllowedOrigins" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

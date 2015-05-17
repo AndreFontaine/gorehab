@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Go Rehab</title>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/Kinect-1.8.0.js"></script> <!-- LIBRERIA KINECT - No Tocar -->
+    <script type="text/javascript" src="js/GoRehab.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/Kinect-1.8.0.css" /> <!-- ESTILOS KINECT MICROSOFT -->
+    <link rel="stylesheet" type="text/css" href="css/GoRehab.css" /> 
+</head>
+<body>
+    <div id="uiContainer">
+        <img id="logoImg" src="Images\logo.png"/>
+        <span id="sampleName">Kinect Web Basics</span>
+        <div id="backgroundContainer">
+            <!--<img id="backgroundImg" src="Images\beach.jpg"/>--> 
+            <canvas id="userViewerCanvas" class="streamImageCanvas"></canvas> <!-- LINEA KINECT -->
+            <canvas id="backgroundRemovalCanvas" class="streamImageCanvas"></canvas> <!-- LINEA KINECT -->
+        </div>
+        <div id="buttonContainer">
+            <div id="choosePanel">
+                <div id="imgButtonContainer1" class="imgButtonContainer">
+                    <div class="kinect-button image"> <!-- CLASE KINECT -->
+                        <img src="Images/beach.jpg"/>
+                    </div>
+                </div>
+                <div id="imgButtonContainer2" class="imgButtonContainer">
+                    <div class="kinect-button image">  <!-- CLASE KINECT -->
+                        <img src="Images/fireworks.jpg"/>
+                    </div>
+                </div>
+                <div id="imgButtonContainer3" class="imgButtonContainer">
+                    <div class="kinect-button image"> <!-- CLASE KINECT -->
+                        <img src="Images/hamlet.jpg"/>
+                    </div>
+                </div>
+                <div id="imgButtonContainer4" class="imgButtonContainer">
+                    <div class="kinect-button image"> <!-- CLASE KINECT -->
+                        <img src="Images/operahouse.jpg"/>
+                    </div>
+                </div>
+            </div>
+            <div class="commandButtonContainer">
+                <div id="togglePanelButton" class="kinect-button tile"> <!-- CLASE KINECT -->
+                    <div class="commandButtonContent">
+                        <span class="kinect-button-text"></span> <!-- CLASE KINECT -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
