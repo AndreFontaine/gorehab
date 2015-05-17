@@ -73,6 +73,8 @@ li {
   position: relative;
 }
 .inner-circle {
+  cursor: pointer; 
+  cursor: hand;
   background: #ff0041;
   border-radius: 50%;
   color: #fff;
@@ -102,18 +104,24 @@ li {
   background-position-x: 12px;
   background-position-y: 8px;
   background-color: #ff0041;
+  cursor: pointer; 
+  cursor: hand;
 }
 .rutinas {
   background: url("../img/rutinas.png") 0 0 no-repeat;
   background-position-x: 12px;
   background-position-y: 8px;
   background-color: #ff0041;
+  cursor: pointer; 
+  cursor: hand;
 }
 .progreso {
   background: url("../img/progreso.png") 0 0 no-repeat;
   background-position-x: 12px;
   background-position-y: 8px;
   background-color: #ff0041;
+  cursor: pointer; 
+  cursor: hand;
 }
 .btn--next {
   width: 50px;
@@ -213,6 +221,6 @@ input[type="text"] {
   text-transform: uppercase;
   font-weight: bolder;
 }
-.spn--module {
-  color: #ff0041;
+.module-hight{
+ color: #ff0041;
 }
