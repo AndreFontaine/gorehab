@@ -15,19 +15,20 @@ widthpanel = 21%
 .main
 	display block
 	background-color color2
+	background url(../img/fondo.png) 0 0 no-repeat
+	background-size cover
 	position fixed
 	top 0
 	width 79%
 	padding 10px
+	height 100%
 .main__camera
 	height 800px
-	background-color color2
 .kinect__camera
 	background-color color1
 	margin 50px
-	height 84%
+	height 94%
 .main__nextbtn
-	background-color color2
 	height 10%
 	text-align right
 	padding 20px
@@ -35,7 +36,8 @@ widthpanel = 21%
 	display inline-block
 .menu__user
 	background #ff0
-	background-image url(../img/man-profile.png)
+	background url(../img/man-profile.png) 0 0 no-repeat
+	background-size cover
 	height 380px
 ul
 	list-style-type none
@@ -110,3 +112,32 @@ ul li
 	background-position-x 12px
 	background-position-y 8px
 	background-color color1
+/* Estilos del chat */
+.main__chat
+	padding 20px
+	margin 10px
+.chat__user
+	padding 5px
+	margin 10px 5px 10px 5px
+.image__chat
+	border-radius 50%
+	padding 5px
+.image__chat, .text__chat, .btn__chat
+	display inline-block	
+	vertical-align middle
+	margin 5px
+.text__chat
+	width 80%
+	min-height 80px
+	background-color color2
+	border-radius 10px
+	padding 15px
+	border-bottom 3px solid color3
+	color #8e8e8e
+	font-size 1.2em
+.chat__img
+	border-radius 50%
+.chat__message
+	vertical-align middle
+input[type="text"]
+		border: none
