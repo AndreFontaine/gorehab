@@ -22,11 +22,6 @@
 .main__camera {
   height: 800px;
 }
-.kinect__camera {
-  background-color: #ff0041;
-  margin: 50px;
-  height: 94%;
-}
 .main__nextbtn {
   height: 10%;
   text-align: right;
